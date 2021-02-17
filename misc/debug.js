@@ -7,7 +7,7 @@ console.log("fs and page created");
 setTimeout(function() {
              console.log("Timeout on phantomjs, exiting");
              phantom.exit();
-       }, 30000);
+       }, 60000);
 
 
 function do_login(page) {
@@ -29,18 +29,23 @@ setTimeout(function() {
                        page.open(new_url, function(status) {
                             console.log("Second stage status: " + status);
                             if(status === "success") {
-                                 new_url = "https://scan9.coverity.com/api/viewContents/issues/v1/28863?projectId=12999&rowCount=-1";
-                                 page.open(new_url, function(status) {
-                                     console.log("Third stage status: " + status);
-                                     if(status === "success") {
-                                         data = page.evaluate(function() {
-                                             return document.body.innerText;
-                                         });
-                                         fs.write("/tmp/report.json", data, "w");
-                                         console.log("All done!");
-                                         phantom.exit();
-                                     }
-                                 });
+	                         setTimeout(function() {
+					 new_url = "https://scan9.coverity.com/api/viewContents/issues/v1/28863?projectId=12999&rowCount=-1";
+					 page.open(new_url, function(status) {
+					     console.log("Third stage status: " + status);
+					     if(status === "success") {
+						 data = page.evaluate(function() {
+						     return document.body.innerText;
+						 });
+						 fs.write("/tmp/report.json", data, "w");
+						 console.log("All done!");
+						 phantom.exit();
+					     }
+					 });
+				     }, 15000);
+
+
+
                             }
                        });
 	       }, 15000);
