@@ -1,6 +1,3 @@
-# vpp-coverity-report
-List of results of static analysis on VPP codebase; by-maintainer according to current MAINTAINERS file
-
 ## Report timing information
   * this report ran at 17/02/2021 22:17:52
   * source /tmp/report.json mtime is 17/02/2021 22:17:52
