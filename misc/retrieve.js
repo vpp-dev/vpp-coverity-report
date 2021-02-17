@@ -5,10 +5,6 @@ setTimeout(function() {
               phantom.exit();
            }, 300000);
 
-console.log("Immediate exit");
-phantom.exit();
-
-
 var page = require('webpage').create();
 
 function do_login(page) {

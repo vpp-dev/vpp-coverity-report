@@ -1,6 +1,6 @@
 #!/bin/sh
 echo Starting X
-X -config misc/dummy-1920x1080.conf -ac :123 &
+Xvfb -ac :123 &
 
 # retrieve the report
 echo "Starting phantomJS in 30 sec" >&2
