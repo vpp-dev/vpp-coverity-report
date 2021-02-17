@@ -1,5 +1,10 @@
 var fs = require('fs');
 
+setTimeout(function() {
+              console.log("Timeout on phantomjs, exiting");
+              phantom.exit();
+           }, 300000);
+
 var page = require('webpage').create();
 
 function do_login(page) {
