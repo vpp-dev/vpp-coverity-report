@@ -9,7 +9,7 @@ setTimeout(function() {
              phantom.exit();
        }, 1000);
 
-page.open("http://stdio.be/", function(st) {
+page.open("https://scan.coverity.com/users/sign_in", function(st) {
   console.log("Status: " + st);
 });
 
