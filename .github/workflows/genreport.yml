@@ -58,7 +58,7 @@ jobs:
         # start a dummy X11
 	X -config vpp-coverity-report/misc/dummy-1920x1080.conf &
 
-        phantomjs /tmp/retrieve.js >&2
+        DISPLAY=:0.0 phantomjs /tmp/retrieve.js >&2
 
         # stop a dummy X11
         kill %1
