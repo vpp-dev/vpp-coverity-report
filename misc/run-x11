@@ -1,9 +1,11 @@
 #!/bin/sh
-X -config misc/dummy-1920x1080.conf &
+echo Starting X
+X -config misc/dummy-1920x1080.conf :123 &
 
 # retrieve the report
-echo "Starting phantomJS" >&2
-DISPLAY=:0.0 phantomjs /tmp/retrieve.js >&2
+echo "Starting phantomJS in 30 sec" >&2
+sleep 30
+DISPLAY=:123.0 phantomjs /tmp/retrieve.js >&2
 
 echo "Done with phantomjs, stopping X" >&2
 
