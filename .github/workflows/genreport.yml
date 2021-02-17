@@ -56,7 +56,7 @@ jobs:
                    /tmp/retrieve.js
 
         # start a dummy X11, retrieve report, stop X11
-        (cd vpp-coverity-report; bash misc/run-x11)
+        (cd vpp-coverity-report/misc; bash misc/run-x11)
 
     - name: Generate the report
       run: |
