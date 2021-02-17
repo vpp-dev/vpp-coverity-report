@@ -7,9 +7,12 @@ echo test | nc -v -w 1 127.0.0.1 6001
 sleep 5
 echo "Start the phantomjs"
 
-sudo tcpdump -ln &
+# sudo tcpdump -ln &
+
+# simplify the task
+DISPLAY=:1.0 phantomjs -v >&2
 # retrieve the report
-DISPLAY=127.0.0.1:1.0 strace phantomjs /tmp/retrieve.js
+# DISPLAY=127.0.0.1:1.0 strace phantomjs /tmp/retrieve.js
 
 echo "Done with phantomjs, stopping X" >&2
 
