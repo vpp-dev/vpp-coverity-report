@@ -1,0 +1,73 @@
+name: Generate static analysis report
+
+on:
+  schedule:
+  - cron:  '15 1 * * *'
+
+#  - cron:  '0 5 * * *'
+
+# - push
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scenario tags'
+
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: prepare the environment
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_COVERITY_REPORT_PRIVATE_SSH_KEY }}
+         ENV_REPORT_LOGIN_USER: ${{ secrets.ENV_REPORT_LOGIN_USER }}
+         ENV_REPORT_LOGIN_PASS: ${{ secrets.ENV_REPORT_LOGIN_PASS }}
+      run: |
+        sudo mkdir /run/user/$(id -u)
+        sudo chown $(whoami) /run/user/$(id -u)
+        sudo apt-get update
+        sudo apt-get install -y coreutils jq phantomjs
+        echo "$SECRET_SSH_KEY" >secret_ssh_key
+        chmod 600 secret_ssh_key
+        wget https://github.com/ayourtch/cov-watchdog/releases/download/v0.0.3/cov-watchdog
+        wget https://git.fd.io/vpp/plain/MAINTAINERS
+        chmod +x cov-watchdog
+        ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-coverity-report.git'
+    - name: Get the JSON file
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_COVERITY_REPORT_PRIVATE_SSH_KEY }}
+         ENV_REPORT_LOGIN_USER: ${{ secrets.ENV_REPORT_LOGIN_USER }}
+         ENV_REPORT_LOGIN_PASS: ${{ secrets.ENV_REPORT_LOGIN_PASS }}
+      run: |
+        cp vpp-coverity-report/misc/retrieve.js /tmp/
+
+        sed -i.bak -e"s/REPORT_LOGIN_USER/$ENV_REPORT_LOGIN_USER/" \
+                   -e"s/REPORT_LOGIN_PASS/$ENV_REPORT_LOGIN_PASS/" \
+                   /tmp/retrieve.js
+        
+        phantomjs /tmp/retrieve.js
+
+    - name: Generate the report
+      run: |
+        ./cov-watchdog -i /tmp/report.json -m MAINTAINERS -s >REPORT-GENERATED.md
+        
+    - name: Push the new report
+      env:
+         SECRET_SSH_KEY: ${{ secrets.VPP_COVERITY_REPORT_PRIVATE_SSH_KEY }}
+      run: |
+         cd vpp-coverity-report
+         git config user.email "ayourtch+ghjobs@gmail.com"
+         git config user.name  "Andrew Yourtchenko (ghjobs)"
+         git add REPORT-GENERATED.md || true
+         git commit -a -m "Auto-update at $(date)"
+         ssh-agent bash -c 'ssh-add ../secret_ssh_key; git push origin main'
+
