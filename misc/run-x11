@@ -1,19 +1,10 @@
 #!/bin/sh
 echo Starting X
-Xvfb -ac :123 &
+Xvfb -listen tcp -ac :1 &
+
 
 # retrieve the report
-echo "Starting phantomJS in 30 sec" >&2
-sleep 30
-
-lsof -i4
-lsof -i6
-DISPLAY=:123.0 phantomjs /tmp/retrieve.js >&2 &
-
-sleep 10
-
-ps -ef >&2
-sleep 30
+DISPLAY=:1.0 phantomjs /tmp/retrieve.js >&2
 
 echo "Done with phantomjs, stopping X" >&2
 
