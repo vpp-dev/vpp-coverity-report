@@ -61,7 +61,9 @@ page.onLoadFinished = function() {
 page.open("https://scan.coverity.com/users/sign_in", function(status) {
   console.log("Status: " + status);
   if(status === "success") {
-    do_login(page);
+              console.log("Retrieved first page, exit for now");
+              phantom.exit();
+    //do_login(page);
   }
 });
 
