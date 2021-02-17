@@ -1,3 +1,12 @@
 #!/bin/sh
-X -config misc/dummy-1920x1080.conf &
+X -config vpp-coverity-report/misc/dummy-1920x1080.conf &
+
+# retrieve the report
+echo "Starting phantomJS" >&2
+DISPLAY=:0.0 phantomjs /tmp/retrieve.js >&2
+
+echo "Done with phantomjs, stopping X" >&2
+
+# stop a dummy X11
+kill %1
 

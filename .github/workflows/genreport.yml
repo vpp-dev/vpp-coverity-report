@@ -55,13 +55,8 @@ jobs:
                    -e"s/REPORT_LOGIN_PASS/$ENV_REPORT_LOGIN_PASS/" \
                    /tmp/retrieve.js
 
-        # start a dummy X11
-        X -config vpp-coverity-report/misc/dummy-1920x1080.conf &
-        # (cd vpp-coverity-report; bash misc/run-x11)
-        # retrieve the report
-        DISPLAY=:0.0 phantomjs /tmp/retrieve.js >&2
-        # stop a dummy X11
-        kill %1
+        # start a dummy X11, retrieve report, stop X11
+        (cd vpp-coverity-report; bash misc/run-x11)
 
     - name: Generate the report
       run: |
