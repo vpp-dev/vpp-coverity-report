@@ -35,7 +35,7 @@ jobs:
         sudo mkdir /run/user/$(id -u)
         sudo chown $(whoami) /run/user/$(id -u)
         sudo apt-get update
-        sudo apt-get install -y coreutils jq phantomjs
+        sudo apt-get install -y coreutils jq phantomjs strace
         sudo apt-get install -y xserver-xorg-video-dummy
         echo "$SECRET_SSH_KEY" >secret_ssh_key
         chmod 600 secret_ssh_key
