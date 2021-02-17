@@ -11,7 +11,7 @@ echo "Start the phantomjs"
 
 # simplify the task
 DISPLAY=:1.0 phantomjs -v >&2
-DISPLAY=:1.0 phantomjs -v debug.js >&2
+DISPLAY=:1.0 phantomjs debug.js >&2
 # retrieve the report
 # DISPLAY=127.0.0.1:1.0 strace phantomjs /tmp/retrieve.js
 
