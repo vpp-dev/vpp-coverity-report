@@ -7,7 +7,7 @@ console.log("fs and page created");
 setTimeout(function() {
              console.log("Timeout on phantomjs, exiting");
              phantom.exit();
-       }, 10000);
+       }, 30000);
 
 
 function do_login(page) {
