@@ -1,5 +1,5 @@
 #!/bin/sh
-X -config vpp-coverity-report/misc/dummy-1920x1080.conf &
+X -config misc/dummy-1920x1080.conf &
 
 # retrieve the report
 echo "Starting phantomJS" >&2
