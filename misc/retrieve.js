@@ -1,3 +1,5 @@
+console.log("Retrieval begins");
+
 var fs = require('fs');
 
 setTimeout(function() {
