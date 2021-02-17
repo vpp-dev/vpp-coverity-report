@@ -2,7 +2,7 @@ name: Generate static analysis report
 
 on:
   schedule:
-  - cron:  '15 1 * * *'
+  - cron:  '21 4 * * *'
 
 #  - cron:  '0 5 * * *'
 
