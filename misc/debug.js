@@ -19,15 +19,6 @@ function do_login(page) {
       console.log("Logging in..");
 }
 
-age.onLoadStarted = function() {
-   console.log("Load started");
-   let x = page.evaluate(function() {
-     return document.location.href
-   });
-   console.log("Starting " + x);
-}
-
-
 setTimeout(function() {
           page.open("https://scan.coverity.com/users/sign_in", function(st) {
              console.log("Status: " + st);
