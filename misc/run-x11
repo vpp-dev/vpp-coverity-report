@@ -1,10 +1,11 @@
 #!/bin/sh
 echo Starting X
 Xvfb -listen tcp -ac :1 &
-
-
+echo "sleep for 10 seconds to avoid race"
+sleep 10
+echo "Start the phantomjs"
 # retrieve the report
-DISPLAY=:1.0 phantomjs /tmp/retrieve.js >&2
+DISPLAY=:1.0 phantomjs /tmp/retrieve.js
 
 echo "Done with phantomjs, stopping X" >&2
 
