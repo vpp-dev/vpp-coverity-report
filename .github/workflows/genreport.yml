@@ -50,10 +50,15 @@ jobs:
          ENV_REPORT_LOGIN_PASS: ${{ secrets.ENV_REPORT_LOGIN_PASS }}
       run: |
         cp vpp-coverity-report/misc/retrieve.js vpp-coverity-report/misc/real-retrieve.js
+        cp vpp-coverity-report/misc/debug.js vpp-coverity-report/misc/real-debug.js
 
         sed -i.bak -e"s/REPORT_LOGIN_USER/$ENV_REPORT_LOGIN_USER/" \
                    -e"s/REPORT_LOGIN_PASS/$ENV_REPORT_LOGIN_PASS/" \
                    vpp-coverity-report/misc/real-retrieve.js
+
+        sed -i.bak -e"s/REPORT_LOGIN_USER/$ENV_REPORT_LOGIN_USER/" \
+                   -e"s/REPORT_LOGIN_PASS/$ENV_REPORT_LOGIN_PASS/" \
+                   vpp-coverity-report/misc/real-debug.js
 
         # start a dummy X11, retrieve report, stop X11
         (cd vpp-coverity-report/misc; bash run-x11)

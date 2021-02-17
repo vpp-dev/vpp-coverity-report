@@ -9,6 +9,18 @@ setTimeout(function() {
              phantom.exit();
        }, 10000);
 
+
+function do_login(page) {
+      page.evaluate(function() {
+        document.getElementById('user_email').value = "REPORT_LOGIN_USER";
+        document.getElementById('user_password').value = "REPORT_LOGIN_PASS";
+        document.getElementsByName('commit')[0].click();
+      });
+      console.log("Logging in..");
+}
+
+
+
 page.open("https://scan.coverity.com/users/sign_in", function(st) {
   console.log("Status: " + st);
 });
