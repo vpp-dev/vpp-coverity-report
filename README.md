@@ -5,7 +5,16 @@ List of results of static analysis on VPP codebase; by-maintainer according to c
   * this report ran at 17/02/2021 22:17:52
   * source /tmp/report.json mtime is 17/02/2021 22:17:52
 
-Note: the 'ownership' is determined automatically from MAINTAINERS file. If you spot incorrect handling of data in MAINTAINERS file, please contact ayourtch@gmail.com.
+Note 1: the 'ownership' is determined automatically from MAINTAINERS file. If you spot incorrect handling of data in MAINTAINERS file, please contact ayourtch@gmail.com.
+
+Note 2: if there are multiple maintainers for a given component, then each these owner gets all of the component issues
+listed under their name.  This makes the overall table longer and scarier, but allows individual component owners just look
+at "their" list.
+
+Note 3: if you are reading this and are not maintainer, but are curious to help - feel free to create account/login
+to http://scan.coverity.com/, and then find the project "VPP" and request the access to it. Then within the list,
+locate the given coverity issue by its number. Unfortunately there are no nice hyperlinks to offer because
+it does not seem possible...
 
 ### Neale Ranns <neale@graphiant.com>:
   * BUG 218454 in function: ipsec_spd_entry_sort, file: /src/vnet/ipsec/ipsec_spd_policy.c
