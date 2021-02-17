@@ -65,7 +65,7 @@ jobs:
 
     - name: Generate the report
       run: |
-        ./cov-watchdog -i /tmp/report.json -m MAINTAINERS -l >REPORT-GENERATED.md
+        ./cov-watchdog -i /tmp/report.json -m MAINTAINERS -l >vpp-coverity-report/REPORT-GENERATED.md
         
     - name: Push the new report
       env:
