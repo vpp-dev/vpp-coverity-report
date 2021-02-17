@@ -1,3 +1,7 @@
 console.log("Hello from phantomjs");
-phantom.exit();
+
+setTimeout(function() {
+             console.log("Timeout on phantomjs, exiting");
+             phantom.exit();
+       }, 1000);
 
