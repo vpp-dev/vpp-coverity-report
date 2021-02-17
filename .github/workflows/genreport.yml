@@ -67,6 +67,8 @@ jobs:
       run: |
         ./cov-watchdog -i /tmp/report.json -m MAINTAINERS -l >vpp-coverity-report/REPORT-GENERATED.md
         sed -i.bak '/^# Open Issues$/,$d' vpp-coverity-report/README.md
+        # re-add the line we have just deleted
+        echo "# Open Issues" >>vpp-coverity-report/README.md
         cat vpp-coverity-report/REPORT-GENERATED.md >>vpp-coverity-report/README.md
 
         
