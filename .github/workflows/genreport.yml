@@ -39,7 +39,7 @@ jobs:
         sudo apt-get install -y xvfb
         echo "$SECRET_SSH_KEY" >secret_ssh_key
         chmod 600 secret_ssh_key
-        wget https://github.com/ayourtch/cov-watchdog/releases/download/v0.0.3/cov-watchdog
+        wget https://github.com/ayourtch/cov-watchdog/releases/download/v0.0.4/cov-watchdog
         wget https://git.fd.io/vpp/plain/MAINTAINERS
         chmod +x cov-watchdog
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-coverity-report.git'
