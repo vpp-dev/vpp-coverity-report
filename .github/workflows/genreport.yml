@@ -65,6 +65,9 @@ jobs:
 
     - name: Generate the report
       run: |
+        echo "======= BEG REPORT ======="
+        cat /tmp/report.json
+        echo "======= END REPORT ======="
         ./cov-watchdog -i /tmp/report.json -m MAINTAINERS -l >vpp-coverity-report/REPORT-GENERATED.md
         sed -i.bak '/^# Open Issues$/,$d' vpp-coverity-report/README.md
         # re-add the line we have just deleted
