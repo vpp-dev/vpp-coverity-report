@@ -31,6 +31,7 @@ setTimeout(function() {
                             if(status === "success") {
 	                         setTimeout(function() {
 					 new_url = "https://scan9.coverity.com/api/viewContents/issues/v1/28863?projectId=12999&rowCount=-1";
+					 new_url = "https://scan9.coverity.com/reports/table.json?projectId=12999&viewId=42724";
 					 page.open(new_url, function(status) {
 					     console.log("Third stage status: " + status);
 					     if(status === "success") {
