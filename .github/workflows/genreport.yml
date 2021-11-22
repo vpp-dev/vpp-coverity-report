@@ -40,28 +40,18 @@ jobs:
         echo "$SECRET_SSH_KEY" >secret_ssh_key
         chmod 600 secret_ssh_key
         wget https://github.com/ayourtch/cov-watchdog/releases/download/v0.0.4/cov-watchdog
+        wget https://github.com/ayourtch/cov-retrieve-vpp/releases/download/v0.0.2/cov-retrieve-vpp
         wget https://git.fd.io/vpp/plain/MAINTAINERS
         chmod +x cov-watchdog
+        chmod +x cov-retrieve-vpp
         ssh-agent bash -c 'ssh-add secret_ssh_key; git clone git@github.com:vpp-dev/vpp-coverity-report.git'
     - name: Get the JSON file
       env:
          SECRET_SSH_KEY: ${{ secrets.VPP_COVERITY_REPORT_PRIVATE_SSH_KEY }}
-         ENV_REPORT_LOGIN_USER: ${{ secrets.ENV_REPORT_LOGIN_USER }}
-         ENV_REPORT_LOGIN_PASS: ${{ secrets.ENV_REPORT_LOGIN_PASS }}
+         COVERITY_USER: ${{ secrets.COVERITY_USER }}
+         COVERITY_PASS: ${{ secrets.COVERITY_PASS }}
       run: |
-        cp vpp-coverity-report/misc/retrieve.js vpp-coverity-report/misc/real-retrieve.js
-        cp vpp-coverity-report/misc/debug.js vpp-coverity-report/misc/real-debug.js
-
-        sed -i.bak -e"s/REPORT_LOGIN_USER/$ENV_REPORT_LOGIN_USER/" \
-                   -e"s/REPORT_LOGIN_PASS/$ENV_REPORT_LOGIN_PASS/" \
-                   vpp-coverity-report/misc/real-retrieve.js
-
-        sed -i.bak -e"s/REPORT_LOGIN_USER/$ENV_REPORT_LOGIN_USER/" \
-                   -e"s/REPORT_LOGIN_PASS/$ENV_REPORT_LOGIN_PASS/" \
-                   vpp-coverity-report/misc/real-debug.js
-
-        # start a dummy X11, retrieve report, stop X11
-        (cd vpp-coverity-report/misc; bash run-x11)
+        ./cov-retrieve-vpp >/tmp/report.json
 
     - name: Generate the report
       run: |
