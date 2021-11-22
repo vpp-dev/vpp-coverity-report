@@ -51,6 +51,8 @@ jobs:
          COVERITY_USER: ${{ secrets.COVERITY_USER }}
          COVERITY_PASS: ${{ secrets.COVERITY_PASS }}
       run: |
+        env | grep COVERITY_USER | sha1sum
+        env | grep COVERITY_PASS | sha1sum
         ./cov-retrieve-vpp >/tmp/report.json
 
     - name: Generate the report
