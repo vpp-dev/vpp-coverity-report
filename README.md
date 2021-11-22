@@ -12,146 +12,108 @@ it does not seem possible...
 
 # Open Issues
 ## Report timing information
-  * this report ran at 28/07/2021 04:45:55
-  * source /tmp/report.json mtime is 28/07/2021 04:45:54
+  * this report ran at 22/11/2021 15:27:42
+  * source /tmp/report.json mtime is 22/11/2021 15:27:42
 
 Note: the 'ownership' is determined automatically from MAINTAINERS file. If you spot incorrect handling of data in MAINTAINERS file, please contact ayourtch@gmail.com.
 
-### Unidentified owner:
-  * BUG 236135 in function: vapi_msg_bridge_domain_details_payload_ntoh, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vpp-api/vapi/l2.api.vapi.h
-  * BUG 220098 in function: api_ip_route_v2_dump, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vnet/ip/ip.api_test2.c
-  * BUG 219549 in function: vl_api_mss_clamp_dir_t_tojson, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/plugins/mss_clamp/mss_clamp.api_tojson.h
-  * BUG 218420 in function: ila_ila2sir, file: /src/plugins/ila/ila.c
-  * BUG 236117 in function: li_hit_node_fn_skx, file: /src/vnet/lawful-intercept/node.c
-  * BUG 236134 in function: vapi_msg_bridge_domain_details_payload_hton, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vpp-api/vapi/l2.api.vapi.h
-  * BUG 236118 in function: worker_handoff_node_fn_skx, file: /src/vnet/handoff.c
-### Vengada <venggovi@cisco.com>:
-  * BUG 218432 in function: nsh_add_del_entry, file: /src/plugins/nsh/nsh_api.c
-### Jon Loeliger <jdl@netgate.com>:
-  * BUG 214755 in function: ip_in_out_acl_inline, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 220099 in function: vl_api_ip_route_lookup_v2_t_handler, file: /src/vnet/ip/ip_api.c
-  * BUG 216981 in function: icmp_to_icmp6, file: /src/vnet/ip/ip4_to_ip6.h
-### Hongjun Ni <hongjun.ni@intel.com>:
-  * BUG 218432 in function: nsh_add_del_entry, file: /src/plugins/nsh/nsh_api.c
-  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-### Miklos Tirpak <miklos.tirpak@emnify.com>:
-  * BUG 219550 in function: vl_api_mss_clamp_enable_disable_t_handler, file: /src/plugins/mss_clamp/mss_clamp_api.c
-### vpp-dev Mailing List <vpp-dev@fd.io>:
-  * BUG 216232 in function: ioam_cache_ts_table_destroy, file: /src/plugins/ioam/ip6/ioam_cache.h
+### Paul Atkins <patkins@graphiant.com>:
+  * BUG 241252 in function: send_template_packet, file: /src/vnet/ipfix-export/flow_report.c
+  * BUG 241250 in function: vl_api_set_ipfix_exporter_t_internal, file: /src/vnet/ipfix-export/flow_api.c
+  * BUG 241249 in function: ipfix_write_headers, file: /src/vnet/ipfix-export/flow_report.c
+### Andrew Yourtchenko <ayourtch@gmail.com>:
+  * BUG 241251 in function: gso_segment_buffer_inline, file: /src/vnet/gso/gso.h
 ### Dave Barach <vpp@barachs.net>:
-  * BUG 214755 in function: ip_in_out_acl_inline, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 237085 in function: clib_socket_init_netns, file: /src/vppinfra/socket.c
   * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-  * BUG 220099 in function: vl_api_ip_route_lookup_v2_t_handler, file: /src/vnet/ip/ip_api.c
-  * BUG 218446 in function: test_crypto_perf, file: /src/plugins/unittest/crypto_test.c
-  * BUG 218382 in function: set_ip6_nd_proxy_cmd, file: /src/vnet/ip6-nd/ip6_nd_proxy.c
-  * BUG 218381 in function: dhcpv6_proxy_to_client_input, file: /src/plugins/dhcp/dhcp6_proxy_node.c
+  * BUG 241159 in function: send_ttype, file: /src/vpp/app/vppctl.c
+  * BUG 238468 in function: icmp6_router_solicitation, file: /src/vnet/ip6-nd/ip6_ra.c
+  * BUG 241160 in function: main, file: /src/vpp/app/vppctl.c
   * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
-  * BUG 216981 in function: icmp_to_icmp6, file: /src/vnet/ip/ip4_to_ip6.h
-### Damjan Marion <damarion@cisco.com>:
-  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
-  * BUG 216249 in function: perfmon_reset, file: /src/plugins/perfmon/perfmon.c
-  * BUG 220289 in function: dpdk_lib_init, file: /src/plugins/dpdk/device/init.c
-  * BUG 218396 in function: linux_pci_init, file: /src/vlib/linux/pci.c
-  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
-  * BUG 220290 in function: dpdk_lib_init, file: /src/plugins/dpdk/device/init.c
-  * BUG 236784 in function: snort_instance_create, file: /src/plugins/snort/main.c
-  * BUG 218391 in function: vlib_pci_device_open, file: /src/vlib/linux/pci.c
-  * BUG 216295 in function: format_text_cell, file: /src/plugins/perfmon/table.c
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-  * BUG 236783 in function: snort_deq_ready, file: /src/plugins/snort/main.c
-### Klement Sekera <ksekera@cisco.com>:
-  * BUG 216586 in function: add_identity_mapping_command_fn, file: /src/plugins/nat/nat44-ed/nat44_ed_cli.c
-### Francois Clad <fclad@cisco.com>:
-  * BUG 218441 in function: srv6_am_localsid_removal_fn, file: /src/plugins/srv6-am/am.c
-### Filip Varga <fivarga@cisco.com>:
-  * BUG 216586 in function: add_identity_mapping_command_fn, file: /src/plugins/nat/nat44-ed/nat44_ed_cli.c
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 241161 in function: main, file: /src/vpp/app/vppctl.c
+  * BUG 238636 in function: vl_api_add_del_ip_punt_redirect_v2_t_handler, file: /src/vnet/ip/ip_api.c
 ### Neale Ranns <neale@graphiant.com>:
-  * BUG 218398 in function: show_policer_command_fn, file: /src/vnet/policer/policer.c
-  * BUG 218381 in function: dhcpv6_proxy_to_client_input, file: /src/plugins/dhcp/dhcp6_proxy_node.c
+  * BUG 240629 in function: fib_prefix_ip6_addr_increment, file: /src/vnet/fib/fib_types.c
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 238636 in function: vl_api_add_del_ip_punt_redirect_v2_t_handler, file: /src/vnet/ip/ip_api.c
   * BUG 216057 in function: fib_sas6_get, file: /src/vnet/fib/fib_sas.c
-  * BUG 216981 in function: icmp_to_icmp6, file: /src/vnet/ip/ip4_to_ip6.h
-  * BUG 214755 in function: ip_in_out_acl_inline, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 218382 in function: set_ip6_nd_proxy_cmd, file: /src/vnet/ip6-nd/ip6_nd_proxy.c
-  * BUG 220099 in function: vl_api_ip_route_lookup_v2_t_handler, file: /src/vnet/ip/ip_api.c
-### Florin Coras <fcoras@cisco.com>:
-  * BUG 218446 in function: test_crypto_perf, file: /src/plugins/unittest/crypto_test.c
+  * BUG 241231 in function: vl_api_ipsec_itf_delete_t_handler, file: /src/vnet/ipsec/ipsec_api.c
+  * BUG 238468 in function: icmp6_router_solicitation, file: /src/vnet/ip6-nd/ip6_ra.c
+### Radu Nicolau <radu.nicolau@intel.com>:
+  * BUG 241231 in function: vl_api_ipsec_itf_delete_t_handler, file: /src/vnet/ipsec/ipsec_api.c
+### Damjan Marion <damarion@cisco.com>:
+  * BUG 241160 in function: main, file: /src/vpp/app/vppctl.c
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+  * BUG 241159 in function: send_ttype, file: /src/vpp/app/vppctl.c
+  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
+  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
+  * BUG 241161 in function: main, file: /src/vpp/app/vppctl.c
+### Jon Loeliger <jdl@netgate.com>:
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 238636 in function: vl_api_add_del_ip_punt_redirect_v2_t_handler, file: /src/vnet/ip/ip_api.c
 ### Ole Troan <ot@cisco.com>:
-  * BUG 236140 in function: test_loopbacks_1, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 236139 in function: Create_loopback_cb, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 236136 in function: test_api_strings, file: /src/vpp-api/vapi/vapi_c_test.c
-  * BUG 236137 in function: Delete_loopback_cb, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 236138 in function: test_loopbacks_2, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 216586 in function: add_identity_mapping_command_fn, file: /src/plugins/nat/nat44-ed/nat44_ed_cli.c
+  * BUG 241249 in function: ipfix_write_headers, file: /src/vnet/ipfix-export/flow_report.c
+  * BUG 241252 in function: send_template_packet, file: /src/vnet/ipfix-export/flow_report.c
+  * BUG 241250 in function: vl_api_set_ipfix_exporter_t_internal, file: /src/vnet/ipfix-export/flow_api.c
+### Fan Zhang <roy.fan.zhang@intel.com>:
+  * BUG 241231 in function: vl_api_ipsec_itf_delete_t_handler, file: /src/vnet/ipsec/ipsec_api.c
+### Unidentified owner:
+  * BUG 219549 in function: vl_api_mss_clamp_dir_t_tojson, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/plugins/mss_clamp/mss_clamp.api_tojson.h
+  * BUG 238635 in function: api_ip_punt_redirect_v2_dump, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vnet/ip/ip.api_test2.c
+  * BUG 220098 in function: api_ip_route_v2_dump, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vnet/ip/ip.api_test2.c
+### Hongjun Ni <hongjun.ni@intel.com>:
+  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+### Mohsin Kazmi <sykazmi@cisco.com>:
+  * BUG 241251 in function: gso_segment_buffer_inline, file: /src/vnet/gso/gso.h
 ### Pablo Camarillo <pcamaril@cisco.com>:
+  * BUG 218427 in function: sr_policy_mod, file: /src/vnet/srv6/sr_policy_rewrite.c
   * BUG 218409 in function: sr_steering_policy, file: /src/vnet/srv6/sr_steering.c
   * BUG 218375 in function: sr_policy_del, file: /src/vnet/srv6/sr_policy_rewrite.c
-  * BUG 218427 in function: sr_policy_mod, file: /src/vnet/srv6/sr_policy_rewrite.c
   * BUG 180995 in function: sr_mpls_policy_assign_endpoint_color, file: /src/vnet/srmpls/sr_mpls_policy.c
 
 
-all emails: Damjan Marion <damarion@cisco.com>; Dave Barach <vpp@barachs.net>; Filip Varga <fivarga@cisco.com>; Florin Coras <fcoras@cisco.com>; Francois Clad <fclad@cisco.com>; Hongjun Ni <hongjun.ni@intel.com>; Jon Loeliger <jdl@netgate.com>; Klement Sekera <ksekera@cisco.com>; Miklos Tirpak <miklos.tirpak@emnify.com>; Neale Ranns <neale@graphiant.com>; Ole Troan <ot@cisco.com>; Pablo Camarillo <pcamaril@cisco.com>; Vengada <venggovi@cisco.com>
+all emails: Andrew Yourtchenko <ayourtch@gmail.com>; Damjan Marion <damarion@cisco.com>; Dave Barach <vpp@barachs.net>; Fan Zhang <roy.fan.zhang@intel.com>; Hongjun Ni <hongjun.ni@intel.com>; Jon Loeliger <jdl@netgate.com>; Mohsin Kazmi <sykazmi@cisco.com>; Neale Ranns <neale@graphiant.com>; Ole Troan <ot@cisco.com>; Pablo Camarillo <pcamaril@cisco.com>; Paul Atkins <patkins@graphiant.com>; Radu Nicolau <radu.nicolau@intel.com>
 
 
 ## Per-Component Open Coverity Defects
-### Plugin - Unit Tests:
-  * BUG 218446 in function: test_crypto_perf, file: /src/plugins/unittest/crypto_test.c
-### VNET IPv6 LPM:
-  * BUG 214755 in function: ip_in_out_acl_inline, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 216981 in function: icmp_to_icmp6, file: /src/vnet/ip/ip4_to_ip6.h
-  * BUG 220099 in function: vl_api_ip_route_lookup_v2_t_handler, file: /src/vnet/ip/ip_api.c
-### Plugin - snort plugin:
-  * BUG 236784 in function: snort_instance_create, file: /src/plugins/snort/main.c
-  * BUG 236783 in function: snort_deq_ready, file: /src/plugins/snort/main.c
-### Plugin - DPDK:
-  * BUG 220289 in function: dpdk_lib_init, file: /src/plugins/dpdk/device/init.c
-  * BUG 220290 in function: dpdk_lib_init, file: /src/plugins/dpdk/device/init.c
 ### VNET IPv4 LPM:
-  * BUG 216981 in function: icmp_to_icmp6, file: /src/vnet/ip/ip4_to_ip6.h
-  * BUG 214755 in function: ip_in_out_acl_inline, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 220099 in function: vl_api_ip_route_lookup_v2_t_handler, file: /src/vnet/ip/ip_api.c
-### Plugin - TCP MSS Clamping:
-  * BUG 219550 in function: vl_api_mss_clamp_enable_disable_t_handler, file: /src/plugins/mss_clamp/mss_clamp_api.c
-### Infrastructure Library:
-  * BUG 237085 in function: clib_socket_init_netns, file: /src/vppinfra/socket.c
-### Binary API Compiler for C and C++:
-  * BUG 236137 in function: Delete_loopback_cb, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 236139 in function: Create_loopback_cb, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 236136 in function: test_api_strings, file: /src/vpp-api/vapi/vapi_c_test.c
-  * BUG 236140 in function: test_loopbacks_1, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-  * BUG 236138 in function: test_loopbacks_2, file: /src/vpp-api/vapi/vapi_cpp_test.cpp
-### Plugin - NSH:
-  * BUG 218432 in function: nsh_add_del_entry, file: /src/plugins/nsh/nsh_api.c
-### Plugin - IOAM:
-  * BUG 216232 in function: ioam_cache_ts_table_destroy, file: /src/plugins/ioam/ip6/ioam_cache.h
-### Vector Library - PCI:
-  * BUG 218391 in function: vlib_pci_device_open, file: /src/vlib/linux/pci.c
-  * BUG 218396 in function: linux_pci_init, file: /src/vlib/linux/pci.c
-### Plugin - NAT:
-  * BUG 216586 in function: add_identity_mapping_command_fn, file: /src/plugins/nat/nat44-ed/nat44_ed_cli.c
-### VNET Policer:
-  * BUG 218398 in function: show_policer_command_fn, file: /src/vnet/policer/policer.c
-### Plugin - IPv6 Segment Routing Masquerading Proxy:
-  * BUG 218441 in function: srv6_am_localsid_removal_fn, file: /src/plugins/srv6-am/am.c
-### Plugin - PPPoE:
-  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 238636 in function: vl_api_add_del_ip_punt_redirect_v2_t_handler, file: /src/vnet/ip/ip_api.c
+### VNET GSO:
+  * BUG 241251 in function: gso_segment_buffer_inline, file: /src/vnet/gso/gso.h
+### VPP Executable:
+  * BUG 241161 in function: main, file: /src/vpp/app/vppctl.c
+  * BUG 241160 in function: main, file: /src/vpp/app/vppctl.c
+  * BUG 241159 in function: send_ttype, file: /src/vpp/app/vppctl.c
 ### VNET Segment Routing (IPv6 and MPLS):
   * BUG 218409 in function: sr_steering_policy, file: /src/vnet/srv6/sr_steering.c
-  * BUG 180995 in function: sr_mpls_policy_assign_endpoint_color, file: /src/vnet/srmpls/sr_mpls_policy.c
-  * BUG 218375 in function: sr_policy_del, file: /src/vnet/srv6/sr_policy_rewrite.c
   * BUG 218427 in function: sr_policy_mod, file: /src/vnet/srv6/sr_policy_rewrite.c
+  * BUG 218375 in function: sr_policy_del, file: /src/vnet/srv6/sr_policy_rewrite.c
+  * BUG 180995 in function: sr_mpls_policy_assign_endpoint_color, file: /src/vnet/srmpls/sr_mpls_policy.c
+### VPP Main App:
+  * BUG 241161 in function: main, file: /src/vpp/app/vppctl.c
+  * BUG 241160 in function: main, file: /src/vpp/app/vppctl.c
+  * BUG 241159 in function: send_ttype, file: /src/vpp/app/vppctl.c
+### VNET Ipfix Export:
+  * BUG 241252 in function: send_template_packet, file: /src/vnet/ipfix-export/flow_report.c
+  * BUG 241249 in function: ipfix_write_headers, file: /src/vnet/ipfix-export/flow_report.c
+  * BUG 241250 in function: vl_api_set_ipfix_exporter_t_internal, file: /src/vnet/ipfix-export/flow_api.c
+### VNET - IP6 Neighbor Discovery:
+  * BUG 238468 in function: icmp6_router_solicitation, file: /src/vnet/ip6-nd/ip6_ra.c
 ### VNET Ethernet:
   * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
   * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
 ### Plugin - performance counter:
   * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
-  * BUG 216295 in function: format_text_cell, file: /src/plugins/perfmon/table.c
-  * BUG 216249 in function: perfmon_reset, file: /src/plugins/perfmon/perfmon.c
-### Plugin - DHCP:
-  * BUG 218381 in function: dhcpv6_proxy_to_client_input, file: /src/plugins/dhcp/dhcp6_proxy_node.c
+### VNET IPSec:
+  * BUG 241231 in function: vl_api_ipsec_itf_delete_t_handler, file: /src/vnet/ipsec/ipsec_api.c
 ### VNET FIB:
+  * BUG 240629 in function: fib_prefix_ip6_addr_increment, file: /src/vnet/fib/fib_types.c
   * BUG 216057 in function: fib_sas6_get, file: /src/vnet/fib/fib_sas.c
-### VNET - IP6 Neighbor Discovery:
-  * BUG 218382 in function: set_ip6_nd_proxy_cmd, file: /src/vnet/ip6-nd/ip6_nd_proxy.c
+### VNET IPv6 LPM:
+  * BUG 238636 in function: vl_api_add_del_ip_punt_redirect_v2_t_handler, file: /src/vnet/ip/ip_api.c
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+### Plugin - PPPoE:
+  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
