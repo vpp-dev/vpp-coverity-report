@@ -53,7 +53,15 @@ jobs:
       run: |
         env | grep COVERITY_USER | sha1sum
         env | grep COVERITY_PASS | sha1sum
-        ./cov-retrieve-vpp >/tmp/report.json
+        for TRY in $(seq 1 5); do
+          echo "Try number $TRY"
+          if ./cov-retrieve-vpp >/tmp/report.json; then
+           break
+          fi
+          echo "Attempt failed, sleep for a couple of minutes"
+          sleep 120
+        done
+
 
     - name: Generate the report
       run: |
