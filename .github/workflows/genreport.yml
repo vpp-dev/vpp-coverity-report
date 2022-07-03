@@ -32,7 +32,7 @@ jobs:
          ENV_REPORT_LOGIN_USER: ${{ secrets.ENV_REPORT_LOGIN_USER }}
          ENV_REPORT_LOGIN_PASS: ${{ secrets.ENV_REPORT_LOGIN_PASS }}
       run: |
-        sudo mkdir /run/user/$(id -u)
+        sudo mkdir /run/user/$(id -u) || true
         sudo chown $(whoami) /run/user/$(id -u)
         sudo apt-get update
         sudo apt-get install -y coreutils jq phantomjs strace
