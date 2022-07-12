@@ -40,7 +40,7 @@ jobs:
         echo "$SECRET_SSH_KEY" >secret_ssh_key
         chmod 600 secret_ssh_key
         wget https://github.com/ayourtch/cov-watchdog/releases/download/v0.0.4/cov-watchdog
-        wget https://github.com/ayourtch/cov-retrieve-vpp/releases/download/v0.0.2/cov-retrieve-vpp
+        wget https://github.com/ayourtch/cov-retrieve-vpp/releases/download/v0.0.3/cov-retrieve-vpp
         wget https://git.fd.io/vpp/plain/MAINTAINERS
         chmod +x cov-watchdog
         chmod +x cov-retrieve-vpp
