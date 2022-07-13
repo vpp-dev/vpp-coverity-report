@@ -12,195 +12,235 @@ it does not seem possible...
 
 # Open Issues
 ## Report timing information
-  * this report ran at 12/07/2022 12:46:45
-  * source /tmp/report.json mtime is 12/07/2022 12:46:45
+  * this report ran at 13/07/2022 04:57:38
+  * source /tmp/report.json mtime is 13/07/2022 04:57:38
 
 Note: the 'ownership' is determined automatically from MAINTAINERS file. If you spot incorrect handling of data in MAINTAINERS file, please contact ayourtch@gmail.com.
 
-### vpp-dev Mailing List <vpp-dev@fd.io>:
-  * BUG 249210 in function: BIT_SET, file: /src/plugins/ioam/lib-e2e/ioam_seqno_lib.h
+### Neale Ranns <neale@graphiant.com>:
+  * BUG 274753 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274739 in function: fill_ip4_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
+  * BUG 274749 in function: ipsec_fp_ip6_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274734 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274737 in function: ipsec_fp_ip6_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 274752 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274738 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
+  * BUG 249175 in function: fib_entry_src_get_vft, file: /src/vnet/fib/fib_entry_src.c
+  * BUG 216937 in function: lcp_itf_pair_create, file: /src/plugins/linux-cp/lcp_interface.c
+  * BUG 249157 in function: dhcp_proxy_to_client_input, file: /src/plugins/dhcp/dhcp4_proxy_node.c
+  * BUG 274745 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274748 in function: ipsec_fp_ip4_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 274735 in function: vl_api_policer_output_t_handler, file: /src/vnet/policer/policer_api.c
+  * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
+  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
+  * BUG 274746 in function: ipsec_fp_ip4_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
+### Dave Barach <vpp@barachs.net>:
+  * BUG 249157 in function: dhcp_proxy_to_client_input, file: /src/plugins/dhcp/dhcp4_proxy_node.c
+  * BUG 249172 in function: vlib_buffer_free_inline, file: /src/vlib/buffer_funcs.h
+  * BUG 249189 in function: vl_api_dns_resolve_name_t_handler, file: /src/plugins/dns/dns.c
+  * BUG 243671 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
+  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
+  * BUG 249198 in function: vl_api_dns_resolve_ip_t_handler, file: /src/plugins/dns/dns.c
+  * BUG 274744 in function: vl_msg_api_trace_write_one, file: /src/vlibapi/api_shared.c
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
+  * BUG 249223 in function: split_and_rehash, file: /src/vnet/classify/vnet_classify.c
+  * BUG 274736 in function: connect_to_vpp, file: /src/plugins/unittest/api_test.c
+  * BUG 249207 in function: svmdb_local_serialize_strings, file: /src/svm/svmdb.c
+  * BUG 249209 in function: svmdb_local_unserialize_strings, file: /src/svm/svmdb.c
+  * BUG 249179 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
+  * BUG 249217 in function: elog_read_file_not_inline, file: /src/vppinfra/elog.c
+  * BUG 249171 in function: vlib_buffer_chain_linearize, file: /src/vlib/buffer_funcs.h
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+  * BUG 274750 in function: vl_msg_api_process_file, file: /src/vlibmemory/vlib_api_cli.c
+  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
+  * BUG 274751 in function: test_ipsec_spd_outbound_perf_command_fn, file: /src/plugins/unittest/ipsec_test.c
+### Radu Nicolau <radu.nicolau@intel.com>:
+  * BUG 274745 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274752 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274739 in function: fill_ip4_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
+  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
+  * BUG 274753 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274737 in function: ipsec_fp_ip6_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 274734 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274746 in function: ipsec_fp_ip4_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274748 in function: ipsec_fp_ip4_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 274749 in function: ipsec_fp_ip6_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274738 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+### Ole Troan <otroan@employees.org>:
+  * BUG 274742 in function: vl_api_flowprobe_interface_add_del_t_handler, file: /src/plugins/flowprobe/flowprobe.c
+### Filip Varga <fivarga@cisco.com>:
+  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+### Klement Sekera <klement.sekera@gmail.com>:
+  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+### Ray Kinsella <mdr@ashroe.eu>:
+  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
+### Matthew Smith <mgsmith@netgate.com>:
+  * BUG 216937 in function: lcp_itf_pair_create, file: /src/plugins/linux-cp/lcp_interface.c
+### Nathan Skrzypczak <nathan.skrzypczak@gmail.com>:
+  * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
+  * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
+  * BUG 274740 in function: quic_on_receive, file: /src/plugins/quic/quic.c
+### Fan Zhang <roy.fan.zhang@intel.com>:
+  * BUG 274739 in function: fill_ip4_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274738 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274746 in function: ipsec_fp_ip4_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274734 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274737 in function: ipsec_fp_ip6_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 274749 in function: ipsec_fp_ip6_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274745 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274752 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274748 in function: ipsec_fp_ip4_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
+  * BUG 274753 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
+### Ole Troan <ot@cisco.com>:
+  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 274747 in function: vapi_disconnect_from_vpp, file: /src/vpp-api/vapi/vapi.c
+  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 274743 in function: vapi_client_connect, file: /src/vpp-api/vapi/vapi.c
+  * BUG 274741 in function: vapi_disconnect, file: /src/vpp-api/vapi/vapi.c
+  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+### Damjan Marion <damarion@cisco.com>:
+  * BUG 249218 in function: af_packet_device_input_fn, file: /src/vnet/devices/af_packet/node.c
+  * BUG 249199 in function: memif_device_input_inline, file: /src/plugins/memif/node.c
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
+  * BUG 249172 in function: vlib_buffer_free_inline, file: /src/vlib/buffer_funcs.h
+  * BUG 249197 in function: format_rdma_bit_flag, file: /src/plugins/rdma/format.c
+  * BUG 249171 in function: vlib_buffer_chain_linearize, file: /src/vlib/buffer_funcs.h
+  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
+### Dave Wallace <dwallacelf@gmail.com>:
+  * BUG 274740 in function: quic_on_receive, file: /src/plugins/quic/quic.c
+### Aloys Augustin <aloaugus@cisco.com>:
+  * BUG 274740 in function: quic_on_receive, file: /src/plugins/quic/quic.c
+### Hongjun Ni <hongjun.ni@intel.com>:
+  * BUG 249201 in function: vl_api_nsh_add_del_map_t_handler, file: /src/plugins/nsh/nsh_api.c
+  * BUG 249169 in function: vl_api_nsh_add_del_entry_t_handler, file: /src/plugins/nsh/nsh_api.c
+  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
 ### Florin Coras <fcoras@cisco.com>:
+  * BUG 274751 in function: test_ipsec_spd_outbound_perf_command_fn, file: /src/plugins/unittest/ipsec_test.c
+  * BUG 274736 in function: connect_to_vpp, file: /src/plugins/unittest/api_test.c
+  * BUG 274740 in function: quic_on_receive, file: /src/plugins/quic/quic.c
   * BUG 249165 in function: process_map_request, file: /src/plugins/lisp/lisp-cp/control.c
+### Vengada <venggovi@cisco.com>:
+  * BUG 249201 in function: vl_api_nsh_add_del_map_t_handler, file: /src/plugins/nsh/nsh_api.c
+  * BUG 249169 in function: vl_api_nsh_add_del_entry_t_handler, file: /src/plugins/nsh/nsh_api.c
 ### Jon Loeliger <jdl@netgate.com>:
   * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
   * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
 ### Unidentified owner:
-  * BUG 220098 in function: api_ip_route_v2_dump, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vnet/ip/ip.api_test2.c
-  * BUG 253543 in function: worker_handoff_node_fn, file: /src/vnet/handoff.c
   * BUG 238635 in function: api_ip_punt_redirect_v2_dump, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vnet/ip/ip.api_test2.c
-### Radu Nicolau <radu.nicolau@intel.com>:
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
-### Damjan Marion <damarion@cisco.com>:
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-  * BUG 249184 in function: vhost_user_if_input, file: /src/vnet/devices/virtio/vhost_user_input.c
-  * BUG 249172 in function: vlib_buffer_free_inline, file: /src/vlib/buffer_funcs.h
-  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
-  * BUG 249218 in function: af_packet_device_input_fn, file: /src/vnet/devices/af_packet/node.c
-  * BUG 249199 in function: memif_device_input_inline, file: /src/plugins/memif/node.c
-  * BUG 249171 in function: vlib_buffer_chain_linearize, file: /src/vlib/buffer_funcs.h
-  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
-  * BUG 249197 in function: format_rdma_bit_flag, file: /src/plugins/rdma/format.c
-### Artem Glazychev <artem.glazychev@xored.com>:
-  * BUG 249221 in function: noise_consume_response, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249220 in function: noise_consume_initiation, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249219 in function: noise_create_initiation, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249188 in function: noise_create_response, file: /src/plugins/wireguard/wireguard_noise.c
-### Ole Troan <ot@cisco.com>:
-  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-### Hongjun Ni <hongjun.ni@intel.com>:
-  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-  * BUG 249169 in function: vl_api_nsh_add_del_entry_t_handler, file: /src/plugins/nsh/nsh_api.c
-  * BUG 249201 in function: vl_api_nsh_add_del_map_t_handler, file: /src/plugins/nsh/nsh_api.c
-  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-### Mohsin Kazmi <sykazmi@cisco.com>:
-  * BUG 249184 in function: vhost_user_if_input, file: /src/vnet/devices/virtio/vhost_user_input.c
+  * BUG 220098 in function: api_ip_route_v2_dump, file: /build-root/build-vpp_debug-native/vpp/CMakeFiles/vnet/ip/ip.api_test2.c
 ### Benoît Ganne <bganne@cisco.com>:
   * BUG 249197 in function: format_rdma_bit_flag, file: /src/plugins/rdma/format.c
-### Matthew Smith <mgsmith@netgate.com>:
-  * BUG 216937 in function: lcp_itf_pair_create, file: /src/plugins/linux-cp/lcp_interface.c
-### Dave Barach <vpp@barachs.net>:
-  * BUG 249209 in function: svmdb_local_unserialize_strings, file: /src/svm/svmdb.c
-  * BUG 249207 in function: svmdb_local_serialize_strings, file: /src/svm/svmdb.c
-  * BUG 249223 in function: split_and_rehash, file: /src/vnet/classify/vnet_classify.c
-  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
-  * BUG 249189 in function: vl_api_dns_resolve_name_t_handler, file: /src/plugins/dns/dns.c
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-  * BUG 249198 in function: vl_api_dns_resolve_ip_t_handler, file: /src/plugins/dns/dns.c
-  * BUG 249200 in function: vnet_classify_add_del, file: /src/vnet/classify/vnet_classify.c
-  * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
-  * BUG 249172 in function: vlib_buffer_free_inline, file: /src/vlib/buffer_funcs.h
-  * BUG 249222 in function: format_cpu_flags, file: /src/vppinfra/cpu.c
-  * BUG 243671 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
-  * BUG 249217 in function: elog_read_file_not_inline, file: /src/vppinfra/elog.c
-  * BUG 249179 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
-  * BUG 253329 in function: vl_msg_print_trace, file: /src/vlibmemory/vlib_api_cli.c
-  * BUG 249206 in function: hash_bytes, file: /src/vppinfra/hash.c
-  * BUG 249171 in function: vlib_buffer_chain_linearize, file: /src/vlib/buffer_funcs.h
-  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
-  * BUG 249157 in function: dhcp_proxy_to_client_input, file: /src/plugins/dhcp/dhcp4_proxy_node.c
-### Ray Kinsella <mdr@ashroe.eu>:
-  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
-### Nathan Skrzypczak <nathan.skrzypczak@gmail.com>:
-  * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
-  * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
-### Vengada <venggovi@cisco.com>:
-  * BUG 249169 in function: vl_api_nsh_add_del_entry_t_handler, file: /src/plugins/nsh/nsh_api.c
-  * BUG 249201 in function: vl_api_nsh_add_del_map_t_handler, file: /src/plugins/nsh/nsh_api.c
-### Neale Ranns <neale@graphiant.com>:
-  * BUG 249175 in function: fib_entry_src_get_vft, file: /src/vnet/fib/fib_entry_src.c
-  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-  * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
-  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
-  * BUG 249157 in function: dhcp_proxy_to_client_input, file: /src/plugins/dhcp/dhcp4_proxy_node.c
-  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
-  * BUG 216937 in function: lcp_itf_pair_create, file: /src/plugins/linux-cp/lcp_interface.c
-  * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
-  * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
-### Steven Luong <sluong@cisco.com>:
-  * BUG 249184 in function: vhost_user_if_input, file: /src/vnet/devices/virtio/vhost_user_input.c
-### Fan Zhang <roy.fan.zhang@intel.com>:
-  * BUG 249188 in function: noise_create_response, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
-  * BUG 249220 in function: noise_consume_initiation, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249219 in function: noise_create_initiation, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249221 in function: noise_consume_response, file: /src/plugins/wireguard/wireguard_noise.c
-### Klement Sekera <klement.sekera@gmail.com>:
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-### Filip Varga <fivarga@cisco.com>:
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+### vpp-dev Mailing List <vpp-dev@fd.io>:
+  * BUG 249210 in function: BIT_SET, file: /src/plugins/ioam/lib-e2e/ioam_seqno_lib.h
 
 
-all emails: Artem Glazychev <artem.glazychev@xored.com>; Benoît Ganne <bganne@cisco.com>; Damjan Marion <damarion@cisco.com>; Dave Barach <vpp@barachs.net>; Fan Zhang <roy.fan.zhang@intel.com>; Filip Varga <fivarga@cisco.com>; Florin Coras <fcoras@cisco.com>; Hongjun Ni <hongjun.ni@intel.com>; Jon Loeliger <jdl@netgate.com>; Klement Sekera <klement.sekera@gmail.com>; Matthew Smith <mgsmith@netgate.com>; Mohsin Kazmi <sykazmi@cisco.com>; Nathan Skrzypczak <nathan.skrzypczak@gmail.com>; Neale Ranns <neale@graphiant.com>; Ole Troan <ot@cisco.com>; Radu Nicolau <radu.nicolau@intel.com>; Ray Kinsella <mdr@ashroe.eu>; Steven Luong <sluong@cisco.com>; Vengada <venggovi@cisco.com>
+all emails: Aloys Augustin <aloaugus@cisco.com>; Benoît Ganne <bganne@cisco.com>; Damjan Marion <damarion@cisco.com>; Dave Barach <vpp@barachs.net>; Dave Wallace <dwallacelf@gmail.com>; Fan Zhang <roy.fan.zhang@intel.com>; Filip Varga <fivarga@cisco.com>; Florin Coras <fcoras@cisco.com>; Hongjun Ni <hongjun.ni@intel.com>; Jon Loeliger <jdl@netgate.com>; Klement Sekera <klement.sekera@gmail.com>; Matthew Smith <mgsmith@netgate.com>; Nathan Skrzypczak <nathan.skrzypczak@gmail.com>; Neale Ranns <neale@graphiant.com>; Ole Troan <ot@cisco.com>; Ole Troan <otroan@employees.org>; Radu Nicolau <radu.nicolau@intel.com>; Ray Kinsella <mdr@ashroe.eu>; Vengada <venggovi@cisco.com>
 
 
 ## Per-Component Open Coverity Defects
-### VNET FIB:
-  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
-  * BUG 249175 in function: fib_entry_src_get_vft, file: /src/vnet/fib/fib_entry_src.c
-### VNET IPSec:
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
-### Plugin - performance counter:
-  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
 ### Plugin - CNat:
-  * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
   * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
-### VNET IPv6 LPM:
-  * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
-  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
-### VNET Device Drivers:
-  * BUG 249218 in function: af_packet_device_input_fn, file: /src/vnet/devices/af_packet/node.c
-  * BUG 249184 in function: vhost_user_if_input, file: /src/vnet/devices/virtio/vhost_user_input.c
-### Vector Library - Buffer Management:
-  * BUG 249172 in function: vlib_buffer_free_inline, file: /src/vlib/buffer_funcs.h
-  * BUG 249171 in function: vlib_buffer_chain_linearize, file: /src/vlib/buffer_funcs.h
-### Plugin - NAT:
-  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-### Plugin - LISP:
-  * BUG 249165 in function: process_map_request, file: /src/plugins/lisp/lisp-cp/control.c
-### Plugin - DHCP:
-  * BUG 249157 in function: dhcp_proxy_to_client_input, file: /src/plugins/dhcp/dhcp4_proxy_node.c
+  * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
+### Plugin - QUIC protocol:
+  * BUG 274740 in function: quic_on_receive, file: /src/plugins/quic/quic.c
 ### Plugin - RDMA (ibverb) driver:
   * BUG 249197 in function: format_rdma_bit_flag, file: /src/plugins/rdma/format.c
-### Plugin - PPPoE:
-  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-### Plugin - Wireguard:
-  * BUG 249219 in function: noise_create_initiation, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249221 in function: noise_consume_response, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249220 in function: noise_consume_initiation, file: /src/plugins/wireguard/wireguard_noise.c
-  * BUG 249188 in function: noise_create_response, file: /src/plugins/wireguard/wireguard_noise.c
-### Plugin - Simple DNS name resolver:
-  * BUG 249189 in function: vl_api_dns_resolve_name_t_handler, file: /src/plugins/dns/dns.c
-  * BUG 249198 in function: vl_api_dns_resolve_ip_t_handler, file: /src/plugins/dns/dns.c
-### Binary API Libraries:
-  * BUG 253329 in function: vl_msg_print_trace, file: /src/vlibmemory/vlib_api_cli.c
 ### Plugin - NSH:
-  * BUG 249201 in function: vl_api_nsh_add_del_map_t_handler, file: /src/plugins/nsh/nsh_api.c
   * BUG 249169 in function: vl_api_nsh_add_del_entry_t_handler, file: /src/plugins/nsh/nsh_api.c
-### VNET Vhost User Driver:
-  * BUG 249184 in function: vhost_user_if_input, file: /src/vnet/devices/virtio/vhost_user_input.c
-### VNET Native Virtio Drivers:
-  * BUG 249184 in function: vhost_user_if_input, file: /src/vnet/devices/virtio/vhost_user_input.c
-### VNET Interface Common:
-  * BUG 249179 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
-  * BUG 243671 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
-### Plugin - IOAM:
-  * BUG 249210 in function: BIT_SET, file: /src/plugins/ioam/lib-e2e/ioam_seqno_lib.h
-### VNET Ethernet:
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
-### VNET Classifier:
-  * BUG 249200 in function: vnet_classify_add_del, file: /src/vnet/classify/vnet_classify.c
-  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
-  * BUG 249223 in function: split_and_rehash, file: /src/vnet/classify/vnet_classify.c
-### Infrastructure Library:
-  * BUG 249217 in function: elog_read_file_not_inline, file: /src/vppinfra/elog.c
-  * BUG 249206 in function: hash_bytes, file: /src/vppinfra/hash.c
-  * BUG 249222 in function: format_cpu_flags, file: /src/vppinfra/cpu.c
+  * BUG 249201 in function: vl_api_nsh_add_del_map_t_handler, file: /src/plugins/nsh/nsh_api.c
+### Plugin - memif device driver:
+  * BUG 249199 in function: memif_device_input_inline, file: /src/plugins/memif/node.c
+### VNET FIB:
+  * BUG 249175 in function: fib_entry_src_get_vft, file: /src/vnet/fib/fib_entry_src.c
+  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
 ### VNET IPv4 LPM:
   * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
   * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
-### Plugin - memif device driver:
-  * BUG 249199 in function: memif_device_input_inline, file: /src/plugins/memif/node.c
+### Binary API Libraries:
+  * BUG 274750 in function: vl_msg_api_process_file, file: /src/vlibmemory/vlib_api_cli.c
+  * BUG 274744 in function: vl_msg_api_trace_write_one, file: /src/vlibapi/api_shared.c
+### SVM Library:
+  * BUG 249207 in function: svmdb_local_serialize_strings, file: /src/svm/svmdb.c
+  * BUG 249209 in function: svmdb_local_unserialize_strings, file: /src/svm/svmdb.c
+### VNET IPSec:
+  * BUG 274734 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274748 in function: ipsec_fp_ip4_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
+  * BUG 249204 in function: ipsec_sad_entry_add_v3, file: /src/vnet/ipsec/ipsec_api.c
+  * BUG 274753 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274746 in function: ipsec_fp_ip4_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274752 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274749 in function: ipsec_fp_ip6_get_policy_mask, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274745 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274739 in function: fill_ip4_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274738 in function: fill_ip6_hash_policy_kv, file: /src/vnet/ipsec/ipsec_spd_policy.c
+  * BUG 274737 in function: ipsec_fp_ip6_out_policy_match_n, file: /src/vnet/ipsec/ipsec_spd_fp_lookup.h
+### Plugin - flowprobe:
+  * BUG 274742 in function: vl_api_flowprobe_interface_add_del_t_handler, file: /src/plugins/flowprobe/flowprobe.c
+### VNET Policer:
+  * BUG 274735 in function: vl_api_policer_output_t_handler, file: /src/vnet/policer/policer_api.c
+### Plugin - PPPoE:
+  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
+### Vector Library - Buffer Management:
+  * BUG 249171 in function: vlib_buffer_chain_linearize, file: /src/vlib/buffer_funcs.h
+  * BUG 249172 in function: vlib_buffer_free_inline, file: /src/vlib/buffer_funcs.h
+### VNET Classifier:
+  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
+  * BUG 249223 in function: split_and_rehash, file: /src/vnet/classify/vnet_classify.c
+### Plugin - NAT:
+  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 249214 in function: nat44_ed_out2in_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 249202 in function: nat44_ed_out2in_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_out2in.c
+  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+### Plugin - Simple DNS name resolver:
+  * BUG 249189 in function: vl_api_dns_resolve_name_t_handler, file: /src/plugins/dns/dns.c
+  * BUG 249198 in function: vl_api_dns_resolve_ip_t_handler, file: /src/plugins/dns/dns.c
+### Plugin - Unit Tests:
+  * BUG 274736 in function: connect_to_vpp, file: /src/plugins/unittest/api_test.c
+  * BUG 274751 in function: test_ipsec_spd_outbound_perf_command_fn, file: /src/plugins/unittest/ipsec_test.c
 ### Plugin - linux-cp:
   * BUG 216937 in function: lcp_itf_pair_create, file: /src/plugins/linux-cp/lcp_interface.c
-### SVM Library:
-  * BUG 249209 in function: svmdb_local_unserialize_strings, file: /src/svm/svmdb.c
-  * BUG 249207 in function: svmdb_local_serialize_strings, file: /src/svm/svmdb.c
+### Plugin - performance counter:
+  * BUG 218459 in function: intel_uncore_init, file: /src/plugins/perfmon/intel/uncore.c
+### VNET IPv6 LPM:
+  * BUG 240368 in function: ip_in_out_acl_inline_trace, file: /src/vnet/ip/ip_in_out_acl.c
+  * BUG 199502 in function: vnet_ip_mroute_cmd, file: /src/vnet/ip/lookup.c
+### Plugin - LISP:
+  * BUG 249165 in function: process_map_request, file: /src/plugins/lisp/lisp-cp/control.c
+### Plugin - IOAM:
+  * BUG 249210 in function: BIT_SET, file: /src/plugins/ioam/lib-e2e/ioam_seqno_lib.h
+### VNET Device Drivers:
+  * BUG 249218 in function: af_packet_device_input_fn, file: /src/vnet/devices/af_packet/node.c
+### Plugin - DHCP:
+  * BUG 249157 in function: dhcp_proxy_to_client_input, file: /src/plugins/dhcp/dhcp4_proxy_node.c
+### Binary API Compiler for C and C++:
+  * BUG 274741 in function: vapi_disconnect, file: /src/vpp-api/vapi/vapi.c
+  * BUG 274743 in function: vapi_client_connect, file: /src/vpp-api/vapi/vapi.c
+  * BUG 274747 in function: vapi_disconnect_from_vpp, file: /src/vpp-api/vapi/vapi.c
+### VNET Interface Common:
+  * BUG 249179 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
+  * BUG 243671 in function: enqueue_one_to_tx_node, file: /src/vnet/interface_output.c
+### VNET Ethernet:
+  * BUG 218549 in function: identify_subint, file: /src/vnet/ethernet/node.c
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+### Infrastructure Library:
+  * BUG 249217 in function: elog_read_file_not_inline, file: /src/vppinfra/elog.c
