@@ -1,61 +1,92 @@
 ## Report timing information
-  * this report ran at 01/09/2022 05:34:27
-  * source /tmp/report.json mtime is 01/09/2022 05:34:27
+  * this report ran at 02/09/2022 05:47:04
+  * source /tmp/report.json mtime is 02/09/2022 05:47:04
 
 Note: the 'ownership' is determined automatically from MAINTAINERS file. If you spot incorrect handling of data in MAINTAINERS file, please contact ayourtch@gmail.com.
 
-### Radu Nicolau <radu.nicolau@intel.com>:
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
+### Vengada <venggovi@cisco.com>:
+  * BUG 277318 in function: nsh_md2_ioam_trace_init, file: /src/plugins/nsh/nsh-md2-ioam/nsh_md2_ioam_trace.c
+  * BUG 277316 in function: nsh_md2_ioam_export_init, file: /src/plugins/nsh/nsh-md2-ioam/export-nsh-md2-ioam/nsh_md2_ioam_export.c
+### Paul Atkins <patkins@graphiant.com>:
+  * BUG 277323 in function: flow_report_init, file: /src/vnet/ipfix-export/flow_report.c
 ### Nathan Skrzypczak <nathan.skrzypczak@gmail.com>:
-  * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
   * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
-### Fan Zhang <roy.fan.zhang@intel.com>:
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-### Filip Varga <fivarga@cisco.com>:
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
+### Jon Loeliger <jdl@netgate.com>:
+  * BUG 277322 in function: ip6_hop_by_hop_ioam_init, file: /src/vnet/ip/ip6_hop_by_hop.c
+### Florin Coras <fcoras@cisco.com>:
+  * BUG 277312 in function: prom_stat_patterns_add, file: /src/plugins/prom/prom.c
+  * BUG 277315 in function: process_map_request, file: /src/plugins/lisp/lisp-cp/control.c
+  * BUG 277317 in function: prom_stat_patterns_add, file: /src/plugins/prom/prom.c
 ### Hongjun Ni <hongjun.ni@intel.com>:
-  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-### Dave Barach <vpp@barachs.net>:
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
-### Damjan Marion <damarion@cisco.com>:
-  * BUG 249218 in function: af_packet_device_input_fn, file: /src/vnet/devices/af_packet/node.c
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-### Ole Troan <ot@cisco.com>:
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-### Klement Sekera <klement.sekera@gmail.com>:
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
+  * BUG 277316 in function: nsh_md2_ioam_export_init, file: /src/plugins/nsh/nsh-md2-ioam/export-nsh-md2-ioam/nsh_md2_ioam_export.c
+  * BUG 277318 in function: nsh_md2_ioam_trace_init, file: /src/plugins/nsh/nsh-md2-ioam/nsh_md2_ioam_trace.c
+### vpp-dev Mailing List <vpp-dev@fd.io>:
+  * BUG 277325 in function: ioam_export_init, file: /src/plugins/ioam/export/ioam_export.c
+  * BUG 277326 in function: ioam_send_flows, file: /src/plugins/ioam/analyse/ioam_summary_export.c
+  * BUG 277324 in function: ioam_vxlan_gpe_init, file: /src/plugins/ioam/lib-vxlan-gpe/vxlan_gpe_api.c
+  * BUG 277314 in function: vxlan_gpe_ioam_export_init, file: /src/plugins/ioam/export-vxlan-gpe/vxlan_gpe_ioam_export.c
+  * BUG 277311 in function: udp_ping_send_flows, file: /src/plugins/ioam/udp-ping/udp_ping_export.c
 ### Neale Ranns <neale@graphiant.com>:
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
   * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
+  * BUG 277322 in function: ip6_hop_by_hop_ioam_init, file: /src/vnet/ip/ip6_hop_by_hop.c
   * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
+  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
+### Damjan Marion <damarion@cisco.com>:
+  * BUG 277319 in function: load_one_plugin, file: /src/vlib/unix/plugin.c
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+### Dave Barach <vpp@barachs.net>:
+  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
+  * BUG 277320 in function: mspace_calloc, file: /src/vppinfra/dlmalloc.c
+  * BUG 277327 in function: pg_free_edit_group, file: /src/vnet/pg/pg.h
+  * BUG 277313 in function: clib_mem_main_init, file: /src/vppinfra/linux/mem.c
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+  * BUG 277319 in function: load_one_plugin, file: /src/vlib/unix/plugin.c
+  * BUG 277321 in function: vl_msg_api_alloc_internal, file: /src/vlibmemory/memory_shared.c
+  * BUG 277322 in function: ip6_hop_by_hop_ioam_init, file: /src/vnet/ip/ip6_hop_by_hop.c
+### Ole Troan <ot@cisco.com>:
+  * BUG 277323 in function: flow_report_init, file: /src/vnet/ipfix-export/flow_report.c
 
 
-all emails: Damjan Marion <damarion@cisco.com>; Dave Barach <vpp@barachs.net>; Fan Zhang <roy.fan.zhang@intel.com>; Filip Varga <fivarga@cisco.com>; Hongjun Ni <hongjun.ni@intel.com>; Klement Sekera <klement.sekera@gmail.com>; Nathan Skrzypczak <nathan.skrzypczak@gmail.com>; Neale Ranns <neale@graphiant.com>; Ole Troan <ot@cisco.com>; Radu Nicolau <radu.nicolau@intel.com>
+all emails: Damjan Marion <damarion@cisco.com>; Dave Barach <vpp@barachs.net>; Florin Coras <fcoras@cisco.com>; Hongjun Ni <hongjun.ni@intel.com>; Jon Loeliger <jdl@netgate.com>; Nathan Skrzypczak <nathan.skrzypczak@gmail.com>; Neale Ranns <neale@graphiant.com>; Ole Troan <ot@cisco.com>; Paul Atkins <patkins@graphiant.com>; Vengada <venggovi@cisco.com>
 
 
 ## Per-Component Open Coverity Defects
-### Plugin - NAT:
-  * BUG 249194 in function: nat44_ed_in2out_fast_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-  * BUG 249178 in function: nat44_ed_in2out_slow_path_node_fn_inline, file: /src/plugins/nat/nat44-ed/nat44_ed_in2out.c
-### Plugin - PPPoE:
-  * BUG 218437 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-  * BUG 218401 in function: pppoe_input_node_fn, file: /src/plugins/pppoe/pppoe_decap.c
-### VNET IPSec:
-  * BUG 249212 in function: ipsec_tun_protect_input_inline, file: /src/vnet/ipsec/ipsec_tun_in.c
-### VNET FIB:
-  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
-### VNET Classifier:
-  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
-### VNET Ethernet:
-  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
-### VNET Device Drivers:
-  * BUG 249218 in function: af_packet_device_input_fn, file: /src/vnet/devices/af_packet/node.c
+### VNET Ipfix Export:
+  * BUG 277323 in function: flow_report_init, file: /src/vnet/ipfix-export/flow_report.c
+### VNET IPv4 LPM:
+  * BUG 277322 in function: ip6_hop_by_hop_ioam_init, file: /src/vnet/ip/ip6_hop_by_hop.c
+### Plugin - LISP:
+  * BUG 277315 in function: process_map_request, file: /src/plugins/lisp/lisp-cp/control.c
 ### Plugin - CNat:
   * BUG 248561 in function: cnat_maglev_shuffle, file: /src/plugins/cnat/cnat_maglev.c
   * BUG 253541 in function: cnat_maglev_print_changes, file: /src/plugins/cnat/cnat_maglev.c
+### VNET FIB:
+  * BUG 253539 in function: load_balance_fill_buckets_sticky, file: /src/vnet/dpo/load_balance.c
+### Plugin - IOAM:
+  * BUG 277324 in function: ioam_vxlan_gpe_init, file: /src/plugins/ioam/lib-vxlan-gpe/vxlan_gpe_api.c
+  * BUG 277326 in function: ioam_send_flows, file: /src/plugins/ioam/analyse/ioam_summary_export.c
+  * BUG 277311 in function: udp_ping_send_flows, file: /src/plugins/ioam/udp-ping/udp_ping_export.c
+  * BUG 277314 in function: vxlan_gpe_ioam_export_init, file: /src/plugins/ioam/export-vxlan-gpe/vxlan_gpe_ioam_export.c
+  * BUG 277325 in function: ioam_export_init, file: /src/plugins/ioam/export/ioam_export.c
+### Binary API Libraries:
+  * BUG 277321 in function: vl_msg_api_alloc_internal, file: /src/vlibmemory/memory_shared.c
+### VNET IPv6 LPM:
+  * BUG 277322 in function: ip6_hop_by_hop_ioam_init, file: /src/vnet/ip/ip6_hop_by_hop.c
+### VNET Ethernet:
+  * BUG 214973 in function: ethernet_input_inline, file: /src/vnet/ethernet/node.c
+### Infrastructure Library:
+  * BUG 277313 in function: clib_mem_main_init, file: /src/vppinfra/linux/mem.c
+  * BUG 277320 in function: mspace_calloc, file: /src/vppinfra/dlmalloc.c
+### Plugin - Prom:
+  * BUG 277317 in function: prom_stat_patterns_add, file: /src/plugins/prom/prom.c
+  * BUG 277312 in function: prom_stat_patterns_add, file: /src/plugins/prom/prom.c
+### Vector Library:
+  * BUG 277319 in function: load_one_plugin, file: /src/vlib/unix/plugin.c
+### VNET Classifier:
+  * BUG 253328 in function: vl_api_classify_pcap_lookup_table_t_handler, file: /src/vnet/classify/classify_api.c
+### Plugin - NSH:
+  * BUG 277318 in function: nsh_md2_ioam_trace_init, file: /src/plugins/nsh/nsh-md2-ioam/nsh_md2_ioam_trace.c
+  * BUG 277316 in function: nsh_md2_ioam_export_init, file: /src/plugins/nsh/nsh-md2-ioam/export-nsh-md2-ioam/nsh_md2_ioam_export.c
+### VNET Packet Generator:
+  * BUG 277327 in function: pg_free_edit_group, file: /src/vnet/pg/pg.h
